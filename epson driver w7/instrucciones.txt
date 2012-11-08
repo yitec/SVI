@@ -1,0 +1,3 @@
+-intalar el driver(atm 302.exe) como windows xp y con puerto usb
+-luego en  la pagina de propiedades de la impresora cambiar el puerto al USB01 y conectar la impresora y listo
+
