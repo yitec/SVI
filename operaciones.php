@@ -77,19 +77,17 @@ try {
 	
 	$result2=mysql_query("insert into tbl_facturas (consecutivo,nombre,placa,contrato,vehiculo,kilometraje,monto_letras,conductor,tipo_pago,monto_descuento,impuestos,monto_total,paga,cambio,fecha,impresa,estado)values('".$row['consecutivo']."','".$_REQUEST['nombre']."','". trim($row['placa'])."','".$_REQUEST['contrato']."','".$_REQUEST['vehiculo']."','".$_REQUEST['kilometraje']."','".$_REQUEST['letras']."','".$_REQUEST['conductor']."','".$_REQUEST['tipo_pago']."','".$row['descuento']."','".$_REQUEST['impuestos']."','".$total."','".$_REQUEST['paga']."','".$_REQUEST['vuelto']."','".$hoy."','"."0"."','"."1"."')");
 	if (!$result2) {//si da error que me despliegue el error del query
-       	echo $message  = 'Query invalido: ' . mysql_error() . "\n";
-        $message .= 'Query ejecutado: ' . $query;
-		die("Ups!!!! hubo un error en el sistema");
-		
+       		echo $message  = 'Query invalido: ' . mysql_error() . "\n";
+        	$message .= 'Query ejecutado: ' . $query;
+			die("Ups!!!! hubo un error en el sistema");		
 		} 
 
 	
 	$result3=mysql_query("insert into tbl_numfacturas (placa,consecutivo)values('".trim($row['placa'])."','".$row['consecutivo']."')");
 		if (!$result3) {//si da error que me despliegue el error del query
-       	echo $message  = 'Query invalido: ' . mysql_error() . "\n";
-        $message .= 'Query ejecutado: ' . $query;
-		die();
-		
+       		echo $message  = 'Query invalido: ' . mysql_error() . "\n";
+        	$message .= 'Query ejecutado: ' . $query;
+			die();		
 		} 
 
 		
